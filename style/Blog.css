@@ -1,0 +1,115 @@
+
+    :root {
+      --color-dark-blue: #0A0A10;
+      --color-black: #000000;
+      --color-white: #ffffff;
+      --color-gold-text: #bba10e;
+      --color-gold-glow: #c29a18;
+      --color-gray-text: #A9A9A9;
+      --color-line-gold: #b38b00;
+      --color-section-bg: #f4f4f4;
+      --color-modal-bg: #f6f6f9;
+    }
+    body {
+      font-family: 'Merriweather', 'IBM Plex Serif', serif;
+      background: var(--color-section-bg);
+      margin: 0; padding: 0;
+    }
+    .brand-title, .header-bar, .footer-bar, .topic-btn, .css-modal-card h3, .nav-link {
+      font-family: 'IBM Plex Serif', 'Merriweather', serif !important;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+    .header-bar {
+      background: var(--color-dark-blue); color: var(--color-gold-text);
+      width: 100%; min-height: 55px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 14px 0 var(--color-gold-glow);
+      position: fixed; top: 0; left: 0; z-index: 110; font-size: 1.09rem;
+    }
+    .logo-section { display: flex; align-items: center; padding-left: 20px; gap: 11px; }
+    .logo-icon { width: 36px; height: 36px; border-radius: 7px; object-fit: cover; border: 2px solid var(--color-gold-text); background: var(--color-white); }
+    .brand-title { font-size: 1.65rem; font-weight: bold; letter-spacing: 2px; color: var(--color-gold-text);}
+    .nav-menu { display: flex; gap: 32px; padding-right: 34px;}
+    .nav-link { color: var(--color-gold-text); text-decoration: none; font-size: 1.09rem; font-weight: 600; padding: 10px 18px; border-radius: 10px; transition: background 0.16s, color 0.16s;}
+    .nav-link:hover, .nav-link.active { background: var(--color-gold-text); color: var(--color-black);}
+    .footer-bar {background: var(--color-dark-blue); color: var(--color-gold-text); width: 100%; min-height: 36px;
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 -2px 16px 0 var(--color-gold-glow);
+      font-size: 1.04rem; letter-spacing: 1.5px; position: fixed; left: 0; bottom: 0; z-index: 110;}
+    .container { max-width: 1050px; margin: 95px auto 50px auto; text-align: center;}
+    .topic-cards-list {display: flex; flex-wrap: wrap; gap: 55px; justify-content: center; margin: 55px 0 45px 0;}
+    .topic-card-preview { background: var(--color-dark-blue); color: var(--color-gold-text);
+      border-radius: 26px; box-shadow: 0 4px 44px -4px var(--color-gold-glow); padding: 44px 30px 36px 30px;
+      max-width: 350px; min-width: 275px; cursor: pointer; transition: transform 0.13s, box-shadow 0.18s;
+      text-align: center; position: relative; border: 2.5px solid var(--color-line-gold); margin-bottom: 13px;
+      text-decoration: none; display: block;
+    }
+    .topic-card-preview:hover { transform: scale(1.10) translateY(-7px); box-shadow: 0 16px 54px 5px var(--color-gold-glow), 0 0px 7px 2px #bbb8c040;}
+    .topic-card-preview h2 { margin: 18px 0 18px 0; font-size: 1.27rem; font-weight: bold; letter-spacing: 1.2px;}
+    .card-images { display: flex; gap: 17px; justify-content: center; margin-top: 18px;}
+    .card-images img { width: 87px; height: 87px; object-fit: cover; border-radius: 15px; border: 2.5px solid var(--color-gold-glow); box-shadow: 0 4px 18px 0 #deb75074; background: #fff; transition: transform 0.17s;}
+    .topic-card-preview:hover .card-images img { transform: scale(1.09) rotate(-2.5deg);}
+    .page-space-header { height: 65px; }
+    .page-space-footer { height: 44px; }
+    .css-modal { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100vw; height: 100vh;
+      background: linear-gradient(120deg, var(--color-modal-bg) 80%, var(--color-white) 100%);
+      backdrop-filter: blur(10px) brightness(0.94); justify-content: center; align-items: center;
+    }
+    .css-modal:target { display: flex; animation: fadeIn 0.58s cubic-bezier(.68,0,.23,1);}
+    .css-modal-card {
+      background: var(--color-dark-blue); color: var(--color-gold-text);
+      box-shadow: 0 0 80px 16px var(--color-gold-glow), 0 18px 90px 0 #0002;
+      border-radius: 36px;
+      padding: 40px 35px 30px;
+      position: relative;
+      text-align: left;
+      overflow-y: auto; display: flex; flex-direction: column;
+      min-width: 320px; max-width: 560px; min-height: 130px; max-height: 93vh; width: auto; height: auto; box-sizing: border-box;
+      opacity: 0;
+      transform: scale(0.84) translateY(60px) skewY(-5deg);
+      animation: none;
+      transition: opacity 0.34s cubic-bezier(.23, 1, .32, 1), transform 0.54s cubic-bezier(.29, 1.33, .37, 1.02);
+    }
+    .css-modal:target .css-modal-card {
+      opacity: 1;
+      transform: scale(1) translateY(0) skewY(0deg);
+      animation: floatShow 0.7s cubic-bezier(.66,-0.07,.31,1.11) 0s 1, floatLoop 4.7s ease-in-out 0.7s infinite;
+    }
+    @keyframes floatShow {
+      0% {
+        opacity: 0;
+        transform: scale(0.60) translateY(110px) skewY(-8deg) rotate(-8deg);
+        filter: blur(16px) brightness(0.7);
+      }
+      40% {
+        opacity: 1;
+        transform: scale(1.08) translateY(-13px) skewY(3deg) rotate(2deg);
+        filter: blur(1.3px);
+      }
+      80% {
+        opacity: 1;
+        transform: scale(0.99) translateY(5px) skewY(0.3deg);
+        filter: blur(0.15px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0) skewY(0deg) rotate(0deg);
+        filter: blur(0);
+      }
+    }
+    @keyframes floatLoop {
+      0%   { transform: scale(1) translateY(0)  }
+      20%  { transform: scale(1.008) translateY(-8px); }
+      45%  { transform: scale(0.991) translateY(9px); }
+      65%  { transform: scale(1.009) translateY(-8px); }
+      85%  { transform: scale(1.002) translateY(6px); }
+      100% { transform: scale(1) translateY(0); }
+    }
+    .css-modal-close { position: absolute; top: 22px; right: 34px; font-size: 2.1rem; cursor: pointer; color: var(--color-gold-text); background: none; border: none; transition: color 0.23s; z-index: 9; text-decoration: none;}
+    .css-modal-close:hover { color: var(--color-white);}
+    .css-modal-card h3 { margin-top: 5px; color: var(--color-gold-text); }
+    .css-modal-card ul { padding-left: 18px;}
+    .css-modal-card li { margin-bottom: 7px; color: var(--color-white);}
+    .css-modal-card p { margin: 10px 0; color: var(--color-gray-text);}
+    .card-video { width: 100%; height: 210px; margin-bottom: 16px; border-radius: 14px; overflow: hidden; box-shadow: 0 0 12px 1px var(--color-gold-glow); background:#000; display: flex; align-items: center; justify-content: center;}
+  

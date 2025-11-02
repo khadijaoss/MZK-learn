@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Panier - MZK Learn</title>
+  <link rel="stylesheet" href="style/globle.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  <header class="simple-header">      
+    <nav class="gen-navbar-k">
+      <div class="logo-k">
+        <img src="imag/logo.png" alt="MZK Learn Logo" class="logo-img-k">
+        <span class="logo-text-k">MZK Learn</span>
+      </div>
+      <ul class="nav-links-k">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="coursses.html">COURSES</a></li>
+        <li><a href="Blog.html">BLOG</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="events.html">EVENTS</a></li>
+        <li><a href="Paiement.html">PAYMENT</a></li>
+        <li><a href="Panier.html">Cart</a></li>
+
+      </ul>
+      <button href="login.html" class="cta-button-k">LOGIN</button>
+    </nav>
+</header>
+
+  <main class="container">
+    <section class="cart-section">
+      <div class="cart-header">
+        <h2 class="section-header-cart">Items (5 items)</h2>
+        <span class="remove-all">Remove all</span>
+      </div>
+
+      <div class="cart-items-container">
+        <div class="cart-item">
+          <img src="imag/courses/java.jpg" alt="Course 1" class="cart-course-img">
+          <div class="item-details">
+            <span class="item-name">java  Basics</span>
+            <span class="item-category">Unisex clothes</span>
+            <span class="item-info">Color: White</span>
+            <span class="item-info">Size: S</span>
+            
+          </div>
+          <span class="item-price">$50</span>
+          <button class="cart-remove-button">X</button>
+        </div>
+
+        <div class="cart-item">
+          <img src="imag/courses/pyhton2.jpg" alt="Course 2" class="cart-course-img">
+          <div class="item-details">
+            <span class="item-name">pyhton for Beginners</span>
+            <span class="item-category">Unisex clothes</span>
+            <span class="item-info">Color: Black</span>
+            <span class="item-info">Size: S</span>
+            
+          </div>
+          <span class="item-price">$140</span>
+          <button class="cart-remove-button">X</button>
+        </div>
+
+        <div class="cart-item">
+          <img src="imag/courses/php.jpg" alt="course3" class="cart-course-img">
+          <div class="item-details">
+            <span class="item-name">php for Beginners</span>
+            <span class="item-category">Unisex clothes</span>
+            <span class="item-info">Color: Black</span>
+            <span class="item-info">Size: S</span>
+           
+          </div>
+          <span class="item-price">30$</span>
+          <button class="cart-remove-button">X</button>
+        </div>
+
+       
+        <div class="cart-item">
+          <img src="imag/courses/js.jpg" alt="course5" class="cart-course-img">
+          <div class="item-details">
+            <span class="item-name">java script for Beginners</span>
+            <span class="item-category">Unisex clothes</span>
+            <span class="item-info">Color: Black</span>
+            <span class="item-info">Size: S</span>
+            
+          </div>
+          <span class="item-price">35$</span>
+          <button class="cart-remove-button">X</button>
+        </div>
+      </div>
+
+      <!-- <div class="cart-total">
+        <h2>Total: $190</h2>
+      </div>
+       -->
+      <!-- <a href="Paiement.html" class="proceed-to-payment-button">Proceed to Payment</a> -->
+    </section>
+    <section class="payment-section">
+      <div class="checkout-card">
+        <div class="checkout-header">
+          <h1>Checkout</h1>
+          <div class="payment-methods">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+          </div>
+        </div>
+    
+        <form>
+          <div class="form-group">
+            <label for="cardname">Cardholder Name</label>
+            <input type="text" id="cardname" placeholder="Enter name as it appears on the card" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="cardnumber">Card Number</label>
+            <input type="text" id="cardnumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+          </div>
+    
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expiry">Expiry Date</label>
+              <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="cvc">CVC</label>
+              <input type="text" id="cvc" placeholder="123" maxlength="3" required>
+            </div>
+          </div>
+    
+          <button type="submit" class="pay-button">
+            Pay Now
+          </button>
+    
+          <div class="security-note">
+            <span class="secure-icon"></span>
+            All your transactions are 100% encrypted and secure
+          </div>
+        </form>
+      </div>
+      <div class="order-summary-card">
+        <h3>Order summary</h3>
+        <div class="summary-item">
+          <span>Subtotal</span>
+          <span>$200</span>
+        </div>
+        <div class="summary-item">
+          <span>Discount</span>
+          <span>-$30</span>
+        </div>
+        <div class="summary-item">
+          <span>Shipping</span>
+          <span>FREE</span>
+        </div>
+        <div class="summary-total">
+          <span>Total Price</span>
+          <span>$170</span>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 MZK Learn - All rights reserved</p>
+    </div>
+  </footer>
+</body>
+</html>
+

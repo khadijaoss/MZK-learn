@@ -1,0 +1,117 @@
+:root {
+      --gold: #bfa859;
+      --gold-shadow: #bfa8593c;
+      --light-bg: #f5f6fa;
+      --card-bg: #1a1a1d;
+      --input-bg: #fff;
+      --input-border: #e1dbc2;
+      --input-focus-bg: #fdfbe7;
+      --input-shadow: #cab87b15;
+      --btn-bg: linear-gradient(90deg, #e9d18e 50%, #bfa859 100%);
+      --btn-bg-hover: linear-gradient(90deg, #faf3ce 70%, #bfa859 90%);
+      --font-main: 'Roboto Serif', serif;
+      --footer-font-size: 0.95rem;
+    }
+    body {
+      background: var(--light-bg) url('https://www.transparenttextures.com/patterns/circuit-board.png') repeat top center;
+      margin: 0;
+      font-family: var(--font-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .nav-bar {
+      background: var(--card-bg);
+      color: var(--gold);
+      font-family: var(--font-main);
+      padding: 0 34px;
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--gold);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nav-logo img { width: 48px; height: 48px; object-fit: contain; margin-right: 10px;}
+    .nav-logo span { color: var(--gold); font-weight: 700; font-size: 1.29rem; letter-spacing: 1.5px;}
+    .nav-menu { display: flex; gap: 28px; align-items: center;}
+    .nav-menu a { color: var(--gold); background: none; text-decoration: none; font-size: 1.025rem; padding: 7px 17px; border-radius: 6px; font-weight: 500; font-family: var(--font-main); letter-spacing: .3px; transition: background 0.14s, color 0.10s;}
+    .nav-menu a.active, .nav-menu a:hover { background: var(--gold); color: var(--card-bg);}
+    .container-center {
+      flex: 1;
+      display: flex; align-items: flex-start; justify-content: center;
+      min-height: 77vh; position:relative; gap: 30px; flex-wrap:wrap;
+      padding-top:30px;
+    }
+    .form-card {
+      background: var(--card-bg);
+      border-radius: 15px;
+      border: 2.2px solid var(--gold);
+      width: 370px;
+      padding: 37px 32px 27px 32px;
+      box-shadow: 0 6px 31px var(--gold-shadow), 0 2px 12px #bfa8590a;
+      color: var(--gold);
+      text-align: left;
+      font-family: var(--font-main);
+      margin-bottom: 40px;
+      scroll-margin-top: 100px;
+   
+      box-shadow:
+    0 0 22px 6px #ffe59e66,     /* توهج ذهبي (glow) حول الأطراف */
+    0 8px 48px 0 #18181d67,     /* تضليل داكن عميق تحت البطاقة */
+    0 2px 18px 0 #bfa85944;
+    
+    }
+    .form-card h2 {
+      font-size: 1.17rem; font-weight: 700; color: var(--gold);
+      text-align: center; margin-bottom: 25px; letter-spacing: .7px; font-family: var(--font-main);
+    }
+    .form-card input[type="email"],
+    .form-card input[type="text"],
+    .form-card input[type="password"] {
+      width: 100%;
+      border: 1.18px solid var(--input-border);
+      border-radius: 8px;
+      padding: 13px 17px;
+      font-size: 1.03rem;
+      margin-bottom: 17px;
+      background: var(--input-bg);
+      color: #222;
+      font-family: var(--font-main);
+      box-shadow: 0 1px 8px var(--input-shadow);
+      outline: none;
+      transition: border-color 0.19s, box-shadow 0.19s, background 0.15s, transform 0.17s;
+      box-sizing: border-box; display: block;
+    }
+    .form-card input::placeholder { color: #888d8c; font-size: 1.01rem; opacity: .98; font-family: var(--font-main);}
+    .form-card input:focus { border-color: var(--gold); background: var(--input-focus-bg); box-shadow: 0 2px 19px #bfa85972; transform: scale(1.020);}
+    .form-card input[type="checkbox"] { accent-color: var(--gold);}
+    .form-card .form-actions { margin-top: 6px; display: flex; align-items: center; gap: 7px; justify-content: flex-start;}
+    .form-card button {
+      font-family: var(--font-main); font-size: 1.04rem;
+      padding: 9px 26px; font-weight: 700;
+      background: var(--btn-bg); color: #382b00;
+      border-radius: 8px; border: 1px solid var(--gold);
+      margin: 21px 0 7px 0; cursor: pointer; box-shadow: 0 2px 14px #bfa8590f;
+      transition: box-shadow 0.13s, transform 0.11s, background 0.11s; letter-spacing: 0.5px; display: block;
+    }
+    .form-card button:hover { box-shadow: 0 7px 19px #cabd49, 0 2px 13px #cabd49c2; transform: scale(1.035); background: var(--btn-bg-hover); color: #1a1a1d;}
+    .form-card a {
+      color: #c2b888; text-decoration: underline; font-size: .945rem; margin-left: 7px; transition: color 0.18s; font-family: var(--font-main); letter-spacing: 0.07px;
+    }
+    .form-card a:hover { color: var(--gold);}
+    .form-card .small-link { color: #b6b195; font-size: .91rem; margin-top: 3px; display: block;text-align:right;}
+    .form-card .alt-link { color: #d7ceac; text-align: center; margin-top: 6px; font-size: .87rem;}
+    .verify-code-container { display: flex; justify-content: center; gap: 6px; margin: 31px 0 16px 0;}
+    .verify-code-input { width: 36px; height: 42px; background: #fcfcfa; border: 1.5px solid var(--input-border); border-radius: 5.4px; text-align: center; font-size: 1.23rem; font-weight: 600; letter-spacing: 1.5px; transition: border-color 0.17s,box-shadow 0.13s,transform 0.14s,background 0.14s; outline: none; color: #3d361f; font-family: var(--font-main); box-shadow:0 1px 7px #bfa8591a;}
+    .verify-code-input:focus { border-color: var(--gold); background:#faf7eb; box-shadow:0 2px 14px #bfa85956; transform:scale(1.08);}
+    .code-desc {text-align:center;color:#e5db93; font-size:.97rem; margin-top:-11px; margin-bottom:14px;}
+    .footer { background: var(--card-bg); color: #c5ba99; padding: 16px 0 4px 0; font-size: var(--footer-font-size); text-align: center; border-top: 2px solid var(--gold); font-family: var(--font-main); letter-spacing: .06px; font-weight: 400; box-shadow: 0 -4px 12px #d7ba5c0d; margin-top: 5px;}
+    .footer .info-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 28px; margin-bottom: 2px; font-size: var(--footer-font-size); line-height: 1.74; font-family: var(--font-main);}
+    .footer .info-row div { min-width: 118px; margin-bottom: 2px; display: flex; flex-direction: column; align-items: flex-start;}
+    .footer .info-row b { color: var(--gold); font-size: 1em; font-weight: 600; margin-bottom: 1px; letter-spacing:.29px}
+    .footer .icon { width: 14px; margin-right: 5px; vertical-align: middle; opacity:.85; filter: grayscale(1) brightness(1.54);}
+    .footer-legal { width: 100%; font-size: .86em; opacity: .83; margin-top: 6px; letter-spacing:.03px }@media (max-width: 1070px){ .container-center{flex-direction:column;align-items:center;} }
+    @media (max-width:600px){ .container-center{min-height:initial;flex-direction:column;align-items:center;} .form-card{width:97vw;padding:12px 2.5vw; margin-bottom:20px;} .footer .info-row{flex-direction:column;align-items:center; gap:1px;} .footer .info-row div{align-items:center;padding:3px 0;} .nav-bar{padding:0 1vw;} .nav-menu{gap:8px;} }

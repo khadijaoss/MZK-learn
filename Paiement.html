@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Paiement - MZK Learn</title>
+  <link rel="stylesheet" href="style/globle.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  <header class="simple-header">
+    <nav class="gen-navbar-k">
+      <div class="logo-k">
+        <img src="imag/logo.png" alt="MZK Learn Logo" class="logo-img-k">
+        <span class="logo-text-k">MZK Learn</span>
+      </div>
+      <ul class="nav-links-k">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="coursses.html">COURSES</a></li>
+        <li><a href="Blog.html">BLOG</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="events.html">EVENTS</a></li>
+        <li><a href="Paiement.html">PAYMENT</a></li>
+        <li><a href="Panier.html">Cart</a></li>
+
+      </ul>
+      <button href="login.html" class="cta-button-k">LOGIN</button>
+    </nav>
+ </header>
+
+  <main class="container">
+    <section class="cart-section-on">
+      
+      <div class="order-card">
+       
+        <h2>Order</h2>
+        <div class="product-details">
+          <div class="product-image-carousel">
+            <img src="imag/ai1.png" alt="AI Course for Beginners" class="product-main-image">
+            <div class="carousel-indicators">
+              <span class="indicator active"></span>
+              
+            </div>
+          </div>
+    
+          <h3>AI Course for Beginners</h3>
+          <p class="course-subtitle">Master the fundamentals of Artificial Intelligence in 10 lessons.</p>
+    
+          <!-- تقييم الكورس -->
+          <div class="course-rating">
+            <span class="stars">
+              ★★★★☆
+            </span>
+            <span class="rating-value">4.5</span>
+            <span class="rating-count">(1,248 reviews)</span>
+          </div>
+    
+          <div class="product-options">
+            <div class="option-group">
+              <span class="option-label">ACCESS:</span>
+              <span class="option-value">Lifetime</span>
+            </div>
+            <div class="option-group">
+              <span class="option-label">LEVEL:</span>
+              <span class="option-value">Beginner</span>
+            </div>
+          </div>
+    
+          <div class="product-price">
+            <span class="original-price">$139</span>
+            <span class="current-price">$69</span>
+          </div>
+        </div>
+    
+        <div class="order-summary">
+          <div class="summary-item">
+            <span>SUBTOTAL</span>
+            <span>$139</span>
+          </div>
+          <div class="summary-item">
+            <span>DISCOUNT (50% OFF)</span>
+            <span>-$70</span>
+          </div>
+          <div class="summary-item">
+            <span>DELIVERY</span>
+            <span>Instant Access</span>
+          </div>
+          <div class="summary-total">
+            <span>TOTAL</span>
+            <span>$69</span>
+          </div>
+        </div>
+    
+        <button class="checkout-button">Proceed to Payment &#8594;</button>
+    
+        <div class="terms-agreement">
+          <input type="checkbox" id="terms" checked>
+          <label for="terms">
+            By confirming this order, I accept the 
+            <a href="#">Terms of Use</a> and acknowledge instant digital access.
+          </label>
+        </div>
+      </div>
+    </section>
+    <section class="payment-section">
+      <div class="checkout-card">
+        <div class="checkout-header">
+          <h1>Checkout</h1>
+          <div class="payment-methods">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+          </div>
+        </div>
+    
+        <form>
+          <div class="form-group">
+            <label for="cardname">Cardholder Name</label>
+            <input type="text" id="cardname" placeholder="Enter name as it appears on the card" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="cardnumber">Card Number</label>
+            <input type="text" id="cardnumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+          </div>
+    
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expiry">Expiry Date</label>
+              <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="cvc">CVC</label>
+              <input type="text" id="cvc" placeholder="123" maxlength="3" required>
+            </div>
+          </div>
+    
+          <button type="submit" class="pay-button">
+            Pay Now
+          </button>
+    
+          <div class="security-note">
+            <span class="secure-icon"></span>
+            All your transactions are 100% encrypted and secure
+          </div>
+        </form>
+      </div>
+      </section>
+    
+  </main>
+
+  <footer>
+    <p>© 2025 MZK Learn - All rights reserved</p>
+  </footer>
+</body>
+</html>

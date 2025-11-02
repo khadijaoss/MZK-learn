@@ -1,0 +1,495 @@
+
+:root {
+    --c-dark-blue: #0A0A10;        
+    --c-black: #000000;            
+    --c-white: #ffffff;            
+    --c-gold-text: #b39a10;        
+    --c-gold-glow: #b18e1e;        
+    --c-gray-text: #A9A9A9;        
+    --c-line-gold: #b38b00;        
+    --c-section-bg: #f4f4f4;       
+    --c-table-header: #333333;     
+    --transition-speed: 0.3s;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--c-section-bg);
+    color: var(--c-black);
+    direction: ltr;
+    text-align: left;
+}
+
+/* Utility */
+.u-cont { /* container */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. Navbar */
+.h-nav { /* navbar */
+    background-color: var(--c-dark-blue);
+    color: var(--c-white);
+    padding: 15px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--c-line-gold);
+    position: relative;
+    z-index: 2;
+}
+
+.h-nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.h-nav .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Navigation Links List */
+.n-list { /* nav-links */
+    list-style: none;
+    display: flex; 
+    padding: 0;
+    margin: 0;
+}
+
+.n-list li a {
+    color: var(--c-white);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color var(--transition-speed);
+}
+
+.n-list li a:hover {
+    color: var(--c-gold-text);
+}
+
+.h-nav .cta-btn { /* cta-button */
+    background-color: var(--c-gold-text);
+    color: var(--c-dark-blue);
+    border: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 2. Video Background */
+#video-bg { /* video-background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); 
+    object-fit: cover;
+    z-index: 0; 
+    opacity: 0.2; 
+}
+
+/* 3. Hero Section */
+.c-hero { /* course-hero-section */
+    background-color: var(--c-dark-blue);
+    color: var(--c-white);
+    padding: 60px 80px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    background-image: url('brain-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply; 
+}
+
+.c-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1; 
+    z-index: 1;
+} 
+
+.hero-grid { /* hero-content-grid */
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}.v-box { /* video-placeholder */
+    width: 100%;
+    height: 250px;
+    background-color: var(--c-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--c-gold-text);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+}
+
+.play-icon {
+    font-size: 3rem;
+    color: var(--c-gold-text);
+}
+
+.hero-txt h1 { /* course-header-text h1 */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--c-white);
+}
+
+.hero-txt p { /* course-header-text p */
+    font-size: 1.1rem;
+    color: var(--c-gray-text);
+    margin-bottom: 25px;
+}
+
+.buy-act button { /* buy-actions button */
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: transform var(--transition-speed);
+}
+
+.buy-act .buy-now {
+    background-color: var(--c-gold-text);
+    color: var(--c-dark-blue);
+}
+
+.buy-act .add-to-cart {
+    background-color: transparent;
+    color: var(--c-white);
+    border: 2px solid var(--c-white);
+}
+
+.buy-act button:hover {
+    transform: scale(1.05);
+}
+
+/* 4. Main Content */
+.c-main-wrap { /* main-course-content */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 50px 80px;
+    background-color: var(--c-section-bg);
+}
+
+.l-col h2, .r-col h2 { /* left-column h2, right-column h2 */
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--c-line-gold);
+    padding-bottom: 5px;
+    color: var(--c-dark-blue);
+    font-style: normal;
+}
+
+.c-overview p { /* course-overview p */
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Course Levels & Structure */
+.c-struct ul { /* course-structure ul */
+    list-style: none;
+    padding-left: 0;
+}
+
+.c-struct ul li { /* course-structure ul li */
+    background-color: var(--c-white);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-left: 5px solid var(--c-gold-text);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    color: #333;
+    position: relative;
+    z-index: 2;
+}
+
+.c-struct ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.i-card { /* instructor-card */
+    display: flex;
+    align-items: center;
+    background-color: var(--c-white);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.i-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--c-gold-text);
+    margin-right: 15px;
+}
+
+.i-info h4 { /* instructor-info h4 */
+    font-size: 1.2rem;
+    color: var(--c-dark-blue);
+}
+
+.i-info p { /* instructor-info p */
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.r-col { /* right-column */
+    background-color: var(--c-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo-box { /* python-logo-placeholder */
+    width: 100%;
+    height: 150px;
+    background-color: var(--c-dark-blue);
+    display: flex;
+    align-items: center;justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--c-gold-text);
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.k-tags { /* keywords-tags */
+    margin-top: 20px;
+} 
+
+.tag-btn { /* tag-button */
+    display: inline-block;
+    background-color: var(--c-gold-text);
+    color: var(--c-dark-blue);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity var(--transition-speed);
+}
+
+.tag-btn:hover {
+    opacity: 0.9;
+}
+
+/* 5. Testimonials and Trainers */
+.t-section { /* testimonials-trainers-section */
+    background-color: var(--c-dark-blue);
+    color: var(--c-white);
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.t-grid { /* testimonials-trainers-grid */
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 40px;
+    align-items: start;
+    z-index: 10;
+}
+
+/* Expert Trainers Section */
+.e-trainers h2 { /* expert-trainers-sub-section h2 */
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--c-white);
+}
+
+.trainers-wrap { /* trainers-grid */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.t-card { /* trainer-card */
+    text-align: center;
+    width: 120px;
+    transition: transform var(--transition-speed);
+    cursor: pointer;
+}
+
+.t-card:hover {
+    transform: translateY(-5px);
+}
+
+.t-photo { /* trainer-photo */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border: 2px solid var(--c-line-gold);
+    padding: 2px;
+}
+
+.t-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    color: var(--c-white);
+}
+
+.t-card p {
+    color: var(--c-gray-text);
+    font-size: 0.75rem;
+}
+
+/* Testimonials Section */
+.l-testi h2 { /* learner-testimonials-sub-section h2 */
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--c-white);
+}
+
+.cert-grid { /* certificates-grid */
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.cert-item img { /* certificate-item img */
+    width: 500px;
+    height: 300px; 
+    border: 2px solid var(--c-gold-text);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    transition: transform var(--transition-speed);
+}
+
+.cert-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Quotes/Rating Section */
+.rq-section { /* rating-quotes-section */
+    display: flex;
+    gap: 30px;
+    text-align: left;
+}
+
+.r-box { /* rating-box */
+    background-color: var(--c-black);
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    border-left: 5px solid var(--c-gold-text);
+}
+
+.r-box p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--c-gold-text);
+    margin-bottom: 10px;
+}
+
+.r-box .stars {
+    color: var(--c-gold-text);
+    margin-bottom: 10px;
+} 
+
+.q-box { /* quote-box */
+    background-color: var(--c-black);padding: 20px;
+    border-radius: 8px;
+    flex: 2;
+}
+
+.q-box blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--c-gray-text);
+    margin-bottom: 10px;
+}
+
+.q-box footer {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--c-gold-text);
+    text-align: right;
+}
+
+.view-btn { /* view-all-button */
+    background-color: var(--c-white);
+    color: var(--c-dark-blue);
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* 7. Footer */
+.f-bar { /* footer */
+    background-color: var(--c-black);
+    color: var(--c-gray-text);
+    padding: 40px 80px 20px 80px;
+    text-align: left;
+}
+
+.f-bar h3 {
+    color: var(--c-white);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.f-info { /* footer-info */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+.logo-foot { /* logo-footer */
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--c-white);
+    margin-bottom: 15px;
+}
+
+.logo-foot img {
+    width: 50px;
+    margin-right: 10px;
+}

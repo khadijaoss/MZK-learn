@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Sign Up - MZK Learn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/login.css">
+
+  <link rel="stylesheet" href="style/globle.css">
+</head>
+
+<body>
+  <nav class="gen-navbar-k">
+    <div class="logo-k">
+      <img src="imag/logo.png" alt="MZK Learn Logo" class="logo-img-k">
+      <span class="logo-text-k">MZK Learn</span>
+    </div>
+    <ul class="nav-links-k">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="coursses.html">COURSES</a></li>
+      <li><a href="Blog.html">BLOG</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="FAQ.html">FAQ</a></li>
+      <li><a href="events.html">EVENTS</a></li>
+      <li><a href="Paiement.html">PAYMENT</a></li>
+      <li><a href="Panier.html">Cart</a></li>
+
+    </ul>
+    <button class="cta-button-k">LOGIN</b utton>
+  </nav>
+
+  <div class="container-center">
+    <div class="form-card" id="login-card">
+      <h2>Log In to Your Account</h2>
+      <form>
+        <input type="email" name="login-email" placeholder="Email Address" required>
+        <input type="password" name="login-password" placeholder="Password" required>
+        <div class="form-actions">
+          <input type="checkbox" id="login-remember" name="login-remember">
+          <label for="login-remember" style="font-weight:400; font-size:.97rem; color:#cfc388;">Remember me</label>
+        </div>
+        <button type="submit">Log In</button>
+        <a class="small-link" href="#reset-card">Forgot your password?</a>
+        <div class="alt-link">Don't have an account? <a href="#signup-card">Sign Up</a></div>
+      </form>
+    </div>
+    <!-- Sign Up Card -->
+    <div class="form-card" id="signup-card">
+      <h2>Create Your MZK Learn Account</h2>
+      <form>
+        <input type="text" name="signup-name" placeholder="Full Name" required>
+        <input type="email" name="signup-email" placeholder="Email Address" required>
+        <input type="password" name="signup-password" placeholder="Password" required>
+        <input type="password" name="signup-confirm" placeholder="Confirm Password" required>
+        <div class="form-actions">
+          <input type="checkbox" id="signup-terms" name="signup-terms" required>
+          <label for="signup-terms" style="font-weight:400; font-size:.92rem; color:#d7ceac;">I agree the Terms &
+            Conditions</label>
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="alt-link">Already have an account? <a href="#login-card">Log In</a></div>
+      </form>
+    </div>
+    <!-- Reset Password (Enter Email) -->
+    <div class="form-card" id="reset-card">
+      <h2>Reset Password</h2>
+      <form>
+        <input type="email" name="reset-email" placeholder="Email Address" required>
+        <button type="submit" formaction="#verify-code-card">Send Reset Link</button>
+      </form>
+      <div class="alt-link"><a href="#login-card">⬅ Back to login</a></div>
+    </div>
+    <!-- Verify Code Card -->
+    <div class="form-card" id="verify-code-card">
+      <h2>Enter Verification Code</h2>
+      <div class="code-desc">
+        Please check your email for a 6-digit code. Enter it below to continue.
+      </div>
+      <form autocomplete="off">
+        <div class="verify-code-container">
+          <input class="verify-code-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" required>
+          <input class="verify-code-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" required>
+          <input class="verify-code-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" required>
+          <input class="verify-code-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" required>
+          <input class="verify-code-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" required>
+          <input class="verify-code-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" required>
+        </div>
+        <button type="submit">Verify Code</button>
+      </form>
+      <div class="alt-link"><a href="#reset-card">⬅ Back to email</a></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="info-row">
+      <div>
+        <b>Contact</b>
+        <span><img class="icon" src="https://img.icons8.com/ios-filled/50/9c8e6b/email-sign.png"
+            alt="">support@mzklearn.com</span>
+        <span><img class="icon" src="https://img.icons8.com/ios-filled/50/9c8e6b/phone.png" alt="">012 876 9432</span>
+      </div>
+      <div>
+        <b>Address</b>
+        <span>V21B El-Evem</span>
+        <span>Next Campus, DZ</span>
+      </div>
+      <div>
+        <b>Platform</b>
+        <span>Digital training</span>
+        <span>Certification system</span>
+      </div>
+      <div>
+        <b>Legal</b>
+        <span>© 2025 MZK Learn</span>
+        <span>All rights reserved.</span>
+      </div>
+    </div>
+    <div class="footer-legal">
+      MZK Learn &mdash; Excellence in Tech Learning
+    </div>
+  </div>
+</body>
+
+</html>

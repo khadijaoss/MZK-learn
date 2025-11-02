@@ -1,0 +1,230 @@
+
+:root {
+    --dark-bg: #1a1a1a;
+    --dark-surface: #262626;
+    --gold-accent: #c0a50f; 
+    --light-text: #f0f0f0;
+    --subtle-text: #aaaaaa;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 1. Top/Bottom Bars */
+/* .h-bar, .f-bar { 
+    background-color: #0d0d0d;
+    padding: 15px 5%;
+    position: relative;
+    z-index: 10;
+} */
+
+/* 1. Top/Bottom Bars */
+.h-bar, .f-bar { /* top-bar, bottom-bar */
+    background-color: #0d0d0d;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#video-bg { /* video-background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); 
+    object-fit: cover;
+    z-index: 0; 
+    opacity: 0.2; 
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--gold-accent);
+}
+
+.l-nav-wrap { /* logo-and-nav */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    z-index: 15;
+    position: relative; 
+}
+
+/* 2. Navigation List */
+.n-list { /* تم إعادة تسميتها للتوضيح */
+    list-style: none; /* إزالة التنقيط */
+    display: flex; /* تصحيح العرض الأفقي */
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: 200px;
+}
+
+.n-list li {
+    margin-left: 20px;
+}
+
+.n-list a { 
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.n-list a:hover {
+    color: var(--gold-accent);
+}
+
+/* 3. Main Content Container */
+.c-main { /* profile-container */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+}
+
+/* 4. Header Section (Profile) */
+.h-prof { /* profile-header */
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-surface);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.p-img img { /* profile-photo img */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 4px solid var(--gold-accent);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.p-info h1 { /* profile-info h1 */
+    color: var(--gold-accent);
+    margin: 0 0 5px 0;
+    font-size: 2.5em;
+}
+
+.p-info .p-title { /* profile-info .title */
+    color: var(--light-text);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.p-info .u-info { /* profile-info .university-info */
+    color: var(--subtle-text);
+    margin-bottom: 15px;
+}
+
+.b-tags span { /* expertise-badges span */
+    display: inline-block;
+    background-color: rgba(255, 215, 0, 0.2);
+    color: var(--gold-accent);
+    padding: 5px 12px;
+    margin-right: 8px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid var(--gold-accent);
+}/* 5. Bio/Projects Sections */
+.s-box { /* bio-section, projects-section-wrapper */
+    background-color: var(--dark-surface);
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+} 
+
+.s-title { /* section-title */
+    color: var(--gold-accent);
+    border-bottom: 2px solid rgba(255, 215, 0, 0.4);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.s-box ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2.0;
+}
+
+.s-box ul li::before {
+    content: "✦";
+    color: var(--gold-accent);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 5px;
+}
+
+/* 6. Projects Grid */
+.g-grid { /* projects-grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.c-card { /* course-card */
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s;
+}
+
+.c-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+}
+
+.c-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--gold-accent);
+}
+
+.c-details { /* course-details */
+    padding: 15px;
+}
+
+.c-details h3 {
+    color: var(--gold-accent);
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+}
+
+.c-details p {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+.c-details .p-focus { /* project-focus */
+    font-weight: bold;
+    color: var(--subtle-text);
+    font-style: italic;
+    margin-top: 10px;
+    border-top: 1px solid #444;
+    padding-top: 5px;
+}
