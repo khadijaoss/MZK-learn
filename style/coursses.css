@@ -362,6 +362,11 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: opacity var(--transition-speed), transform var(--transition-speed);
+    /* Raise buttons above background/video overlays so they are clickable */
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+  text-decoration-skip-ink: none;
 } 
 
 .path-card .add-btn {

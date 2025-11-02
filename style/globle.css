@@ -111,6 +111,8 @@ body {
   border-radius: 25px;
   transition: all var(--transition-speed);
   box-shadow: 0 4px 15px rgba(187, 161, 14, 0.3);
+  text-decoration: none;
+  text-decoration-skip-ink: none;
 }
 
 .cta-button-k:hover {
