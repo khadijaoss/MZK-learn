@@ -138,3 +138,28 @@ footer p {
   margin: 0 auto;
   text-align: center;
 }
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .gen-navbar-k {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;
+  }
+
+  .nav-links-k {
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Take full width */
+    margin: 20px 0 0 0; /* Adjust margin */
+    text-align: center;
+  }
+
+  .nav-links-k li {
+    margin-bottom: 10px; /* Add space between vertical links */
+  }
+
+  .nav-links-k a {
+    display: block; /* Make links take full width */
+    padding: 10px;
+  }
+}

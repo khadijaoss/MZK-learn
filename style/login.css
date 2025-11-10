@@ -115,3 +115,4 @@
     .footer .icon { width: 14px; margin-right: 5px; vertical-align: middle; opacity:.85; filter: grayscale(1) brightness(1.54);}
     .footer-legal { width: 100%; font-size: .86em; opacity: .83; margin-top: 6px; letter-spacing:.03px }@media (max-width: 1070px){ .container-center{flex-direction:column;align-items:center;} }
     @media (max-width:600px){ .container-center{min-height:initial;flex-direction:column;align-items:center;} .form-card{width:97vw;padding:12px 2.5vw; margin-bottom:20px;} .footer .info-row{flex-direction:column;align-items:center; gap:1px;} .footer .info-row div{align-items:center;padding:3px 0;} .nav-bar{padding:0 1vw;} .nav-menu{gap:8px;} }
+
